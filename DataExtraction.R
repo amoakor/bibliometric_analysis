@@ -19,7 +19,7 @@ write.csv(records, "wos_data.csv")
 
 
 #Scopus API (Preferred for Citation Analysis & Abstracts)
-set_api_key("0e27b22d69f9b6ce4f397bdb1d1dfd74")
+set_api_key("XXXXXXXXXXX")
 query <- "data visualization AND evaluation report"
 res <- scopus_search(query = query, max_count = 100)
 # Extract the data frame from the results
