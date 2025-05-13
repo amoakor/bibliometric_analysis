@@ -1,0 +1,1475 @@
+---
+title: "Preliminary Report, -Richard"
+format: html
+editor: visual
+data: 03-24-2025 
+footer: "Data Visualisation and Communication in Evaluation (Richard Amoako)"
+---
+
+**Title: Data Visualization and Communication in Evaluation-A Bibliometric Analysis**
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+#| echo: false
+#| eval: false
+#| include: false
+#| message: false
+#| warning: false
+#| error: false
+#| results: false
+#| setup: false
+#| import: false
+#| options: false
+#| code_folding: false
+#| cache: false
+```
+
+```{r}
+#Load packages 
+library(tidyverse)
+library(janitor)
+library(psych)
+library(ggplot2)
+library(dplyr)
+
+```
+
+**Introduction**
+
+In an era defined by unprecedented data volume, the ability to effectively visualize and communicate complex information has become critical across disciplines (Kirk, 2019). Within the field of evaluation, data visualization offers powerful tools for enhancing understanding, facilitating stakeholder engagement, and ultimately, informing better decisions (Few, 2012; Evergreen, 2017). As evaluation practice evolves to address increasingly complex social programs and policies, the strategic use of visual displays can transform raw data into actionable insights (Patton, 2018).
+
+Despite the growing recognition of data visualization's potential, the field lacks a comprehensive synthesis of its development, key contributors, and emerging trends. Traditional literature reviews often fall short of capturing the breadth and interdisciplinary nature of this topic. Bibliometric analysis, a quantitative approach to mapping the structure of scientific knowledge, offers a rigorous and systematic alternative (Aria & Cuccurullo, 2017; van Eck & Waltman, 2014). By analyzing publication patterns, citation networks, and keyword co-occurrences, bibliometrics can reveal the intellectual landscape of data visualization in evaluation.
+
+This study employs bibliometric methods using the PRISMA framework to address critical questions about data visualization evolution, key influences, thematic foci, and global distribution of research on data visualization within the evaluation field. Through a comprehensive analysis of scholarly publications, this research aims to provide a valuable resource for researchers, practitioners, and policymakers seeking to understand and leverage the power of data visualization to improve evaluation practice.
+
+*Research Questions*
+
+RQ1- How has data visualization in evaluation evolved over time?
+
+RQ3- What are the most influential publications, authors, and institutions?
+
+RQ2- What types of visualizations and visualization tools are commonly used?
+
+RQ4- What thematic trends and emerging keywords shape this field?
+
+RQ5- How do different countries or disciplines contribute to this research?
+
+*Significance*
+
+This bibliometric study offers significant contributions to both evaluation theory and data visualization practice. First, it identifies critical gaps in the current literature. For instance, the under-representation of accessibility considerations in visualization design highlights a need for future research to focus on inclusive practices that ensure evaluation findings are accessible to diverse audiences. Similarly, the limited number of studies addressing the integration of emerging technologies like AI-driven visualization suggests an area ripe for exploration and innovation.
+
+Second, the analysis identifies best practices in the field. The prominence of stakeholder engagement as a central theme underscores the importance of interactive and participatory visualization approaches. The identification of key journals and influential authors provides a valuable guide for researchers and practitioners seeking to stay abreast of key developments. Furthermore, the study reveals effective collaboration networks, offering potential models for fostering interdisciplinary research and knowledge sharing.
+
+Finally, this study charts future directions for evaluators and data scientists. The increasing emphasis on mixed methods and visual analytics points towards the need for methodological advancements that combine quantitative and qualitative data in meaningful ways. The rise of AI-driven visualization opens new avenues for automating data processing, generating insights, and creating personalized visual displays. By synthesizing these trends and gaps, this bibliometric analysis provides a roadmap for advancing the field of data visualization in evaluation and increasing its impact on policy and practice.
+
+**3. Methods**
+
+*Research Design*
+
+This study employs a bibliometric analysis approach to comprehensively map the intellectual landscape of data visualization in evaluation research. The methodology is complemented by a systematic review process, adhering to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, to ensure a structured, transparent, and replicable selection of relevant literature.
+
+*The research design involves several key stages:*
+
+*Data Collection:* A comprehensive search of the major academic databases (e.g., Scopus, Web of Science) was conducted using predefined search strings related to "data visualization," "evaluation," and related terms.
+
+*Data Screening and Selection:* The initial search results were screened based on predefined inclusion and exclusion criteria, following PRISMA guidelines. This involved assessing titles, abstracts, and full texts to ensure relevance to the study's focus. Data Extraction: Relevant metadata (e.g., authors, titles, abstracts, keywords, publication years, citations) were extracted from the selected publications and imported into a bibliometric database.
+
+*Bibliometric Analysis:* The study applies a range of bibliometric techniques, including: Co-citation analysis: to identify clusters of highly cited publications and reveal the intellectual foundations of the field. Keyword co-occurrence mapping: exploring thematic trends and emerging research areas by analyzing the relationships between keywords used in the literature. Collaboration network analysis: examines patterns of collaboration among authors, institutions, and countries, and identifies key actors and knowledge hubs.
+
+*Data Visualization:* The results of the bibliometric analyses are visualized using network graphs, citation maps, and other visual representations to facilitate the interpretation and communication of the findings.
+
+*Software:* R software was employed for data analysis and visualization. Key packages included 'bibliometrix' for bibliometric analysis, 'tidyverse' for data manipulation and visualization, 'janitor' for data cleaning, and 'psych' for descriptive statistics. By combining systematic review principles with advanced bibliometric techniques, this research design provides a robust and transparent approach to exploring the evolving landscape of data visualization in evaluation research.
+
+**Data Collection and Extraction**
+
+-   **Databases:** **Web of Science and Scopus** were chosen for their large amount of data, broader scope, detailed meta data, and comprehensive subject coverage.
+
+-   **Search Strategy:** Keywords and Boolean search strings:
+
+    -   *“data visualization” AND (evaluation OR program evaluation OR* "process evaluation"*)*
+
+    -   "data visualization" *AND* (evaluation research" OR "evaluation report" OR "impact evaluation")
+
+    -   "data visualization", AND ("evaluation communication" OR "formative evaluation" OR "outcome evaluation"
+
+    -   “communicating” AND “evaluation” AND “results”
+
+-   **Inclusion and Exclusion Criteria:**
+
+    -   Time range: (2010–2025)
+
+    -   Document types: Articles, reviews, book chapters, conference papers
+
+    -   Languages: English
+
+    -   Fields: Social sciences, international development
+
+-   Several methods were used to extract data from online databases, mainly Scopus and Web of Science. Some metadata [were]{.underline} downloaded from [the]{.underline} Scopus and WoS websites using search terms, and CSV files were downloaded. Others were accessed through PyPaperBot and API.
+
+**Results**
+
+***Key Finding***
+
+*Publication Trends*
+
+The bibliometric analysis reveals a steady increase in scholarly output related to data visualization in evaluation over recent years. The upward trajectory in publication counts suggests growing academic and practical interest in leveraging data visualization techniques to enhance evaluation processes. This trend aligns with the broader movement toward data-driven decision-making across disciplines.
+
+*Influential Journals and Sources*
+
+The study identified several journals as leading publication venues for research on data visualization in evaluation. These journals consistently publish high-impact articles, indicating their central role in shaping discourse and advancing methodological innovations in the field. The concentration of publications in a select group of journals highlights the presence of established scholarly communities focused on this intersection.
+
+*Key Authors and Collaboration*
+
+Networks Analysis of authorship patterns points to a core group of prolific researchers who have contributed substantially to literature. Co-authorship networks reveal both tightly knit collaborations and a degree of interdisciplinarity, with authors from diverse backgrounds engaging in joint research efforts. This collaborative landscape has likely facilitated the cross-pollination of ideas and the adoption of best practices in data visualization for evaluation.
+
+T*hematic Patterns and Research Focus*
+
+Thematic analysis of keywords and article abstracts uncovers several dominant research themes: • The integration of interactive and dynamic visualizations to support stakeholder engagement in evaluation. • Methodological advancements in visual analytics are tailored for program and policy evaluation. • The role of visualization in communicating complex findings to non-technical audiences. These themes indicate that the field is not only concerned with technical development but also with the practical utility and accessibility of data visualization in real-world evaluation contexts R was the most used software or application for data visualization and visualization types were generally charts, graphs and plots.
+
+Summary
+
+-   There has been a marked increase in research output on data visualization in evaluation, reflecting its rising importance.
+
+-   A handful of journals and authors exert significant influence, suggesting the emergence of specialized scholarly communities.
+
+-   Collaboration networks are robust, with evidence of interdisciplinary partnerships.
+
+-   Research themes emphasize both methodological innovation and practical application, with a strong focus on enhancing communication and stakeholder engagement through visualization.
+
+*Conclusion*
+
+The bibliometric analysis demonstrates that data visualization is an increasingly vital component of evaluation research. The field is characterized by dynamic growth, influential contributors, and a balance between technical advancement and practical application. These findings provide a foundation for future research and highlight the need for continued innovation and collaboration to further integrate visualization into evaluation practice.
+
+###Below is analysis and output of the data extraction and analysis
+
+```{{r}}
+```
+
+<div>
+
+| Database                        | Number  |
+|---------------------------------|---------|
+| Scopus                          | 950     |
+| WoS                             | 552     |
+| Dupblicates                     | \(88\)  |
+| Removed papers dated below 2010 | \(147\) |
+| Total                           | 1267    |
+
+: Data Extraction
+
+</div>
+
+```{r}
+#Load data
+biblio_df <- read_csv("biblio_data.csv")
+
+##Check the column name of DOI to doi
+biblio_df <- biblio_df %>% rename(doi = DOI)
+
+```
+
+*Data Preprocessing*
+
+**Removing Duplicates**
+
+Total data extracted from the two databases is 1505.
+
+```{r}
+#calculate number of duplicated rows
+sum(duplicated(biblio_df$doi))
+```
+
+```{r}
+#remove duplicates by matching doi
+new_biblio <- biblio_df %>% distinct(doi, .keep_all = TRUE)
+
+#check for duplicates
+sum(duplicated(new_biblio$doi))
+```
+
+**Screening data by title and abstract**
+
+```{r}
+#Screen title and abstract for irrelavant data
+new_biblio <- new_biblio %>% filter(!str_detect(title, "^(?i)abstract"))
+
+#Additional screening is being done using AsReview Lab
+```
+
+##Full text screening Full text screening was performed using Loon Lens.
+
+**Data Cleaning**
+
+```{r}
+
+#check the first few rows of the data
+head(new_biblio)
+
+```
+
+```{r}
+#Revised inclusion criteria: Time range: (2010–2025)
+#filter by years 2010-2025 and create a new dataframe called rnew_biblio
+rnew_biblio <- new_biblio %>% 
+  filter(year >= 2010 & year <= 2025)
+
+#Clean column names
+rnew_biblio <- rnew_biblio %>% 
+  clean_names()
+```
+
+```{r}
+# Handle missing data (NA)
+# Check for missing data
+missing_summary <- rnew_biblio %>%
+  summarise(across(everything(), ~ sum(is.na(.))))
+
+#print (missing_summary)
+```
+
+**Processed Data**
+
+```{r}
+#save new biblio
+write_csv(rnew_biblio, "rnew_biblio.csv")
+```
+
+**What I am working on next:**
+
+-   Complete the data screening from AsReview Lab,
+
+-   Extract additional information on data viz and data vis tools from the documents, and
+
+-   Begin preliminary analysis and visualization.
+
+. . .
+
+```         
+                     NEW UPDATES 03/24/2025
+       
+       
+        **Data Screening and Preliminary Data Visualization**
+        
+```
+
+##Full text screening Full text screening was performed using Loon Lens. The screened data was further cleaned and used for the Data visualization. Total of 326 out of 1267 met the inclusion criteria
+
+```{r}
+#Load new data merged_data.csv
+df_merged <- read_csv("merged_data.csv")
+
+#clean column names
+df_merged <- df_merged %>% clean_names()
+
+#check the structure of the data
+#str(df_merged)
+
+#check the first few rows of the data
+head(df_merged)
+```
+
+```{r}
+#Preprocess the data
+#set the text variables as factors
+df_merged <- df_merged %>%
+  mutate(across(where(is.character), as.factor))
+
+#Convert these variables volume, issue, page_count, cite_count to numeric
+df_merged <- df_merged %>%
+  mutate(across(c(volume, issue, page_count, cite_count), as.numeric))
+```
+
+**Additional Data Cleaning**
+
+```{r}
+#filter to remove paper with low confidence using -Low
+df_merged <- df_merged %>%
+  filter(!str_detect(confidence, "Low"))
+
+#filter to remove paper with paper type -conference paper
+df_merged <- df_merged %>%
+  filter(!str_detect(paper_type, "Conference paper"))
+```
+
+```{r}
+#Check for missing data
+missin <- df_merged %>%
+  summarise(across(everything(), ~ sum(is.na(.))))
+#print (missin)
+
+```
+
+**Preliminary Analysis**
+
+```{r}
+#Summary statistics
+summary(df_merged$cite_count)
+
+```
+
+```{r}
+#Descriptive statistics
+# Frequency table with counts and percentages for gender
+freq_year <- df_merged %>%
+  tabyl(year) %>%  # Create frequency table
+  adorn_pct_formatting()  # Format percentages
+
+freq_confi <- df_merged %>%
+  tabyl(confidence) %>%  # Create frequency table
+  adorn_pct_formatting()  # Format percentages
+
+freq_country <- df_merged %>%
+  tabyl(country) %>%  # Create frequency table
+  adorn_pct_formatting()  # Format percentages
+
+freq_paper <- df_merged %>%
+  tabyl(paper_type) %>%  # Create frequency table
+  adorn_pct_formatting()  # Format percentages
+
+# Print the frequency table
+print(freq_year)
+print(freq_confi)
+#print(freq_country)
+print(freq_paper)
+
+```
+
+```{r}
+#filter papers no citation count
+df_mergedx <- df_merged %>%
+  filter(cite_count > 0)
+```
+
+```{r}
+#Visualize the distribution of citation counts
+library(ggplot2)
+
+stopifnot(
+  "df_mergedx not found" = exists("df_mergedx"),
+  "cite_count column missing" = "cite_count" %in% colnames(df_mergedx),
+  "cite_count contains non-numeric values" = is.numeric(df_mergedx$cite_count)
+)
+
+
+df_mergedx %>%
+   filter(!is.na(cite_count)) %>%
+  ggplot(aes(x = cite_count)) +
+  geom_histogram(binwidth = 10, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Citation Counts",
+       x = "Citation Count",
+       y = "Frequency") +
+  theme_minimal()
+```
+
+```{r}
+#Conduct a citation analysis to identify influential papers
+#Identify key authors and institutions
+#Conduct a keyword co-occurrence analysis
+#Conduct a network analysis to identify collaboration patterns
+#Conduct a content analysis of the visualization techniques used
+
+```
+
+```{r}
+# #Load bibliometrix package
+# library(bibliometrix)
+# 
+# #Create a bibliographic data frame
+# #biblio <- convert2df("df_merge.csv")
+# data <- convert2df("scopus_data.csv", dbsource = "scopus", format = "csv")
+# summary(data)
+```
+
+**Trend Analysis**
+
+```{r}
+# 1. Trend Analysis: Annual publication counts
+yearly_pubs <- df_mergedx %>%
+  group_by(year) %>%
+  summarise(count = n()) %>%
+  arrange(year)
+
+# Plot annual publication counts
+ggplot(yearly_pubs, aes(x = year, y = count)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_line(color = "red", size = 1) +
+  geom_point(color = "red", size = 3) +
+  theme_minimal() +
+  labs(title = "Annual Publication Counts",
+       x = "Year",
+       y = "Number of Publications") +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+library(ggplot2)
+p <- ggplot(mtcars, aes(mpg, hp)) + geom_point()
+
+# Save to working directory
+#ggsave("my_ggplot.png", plot = p, width = 8, height = 6, dpi = 300)
+```
+
+```{r}
+# Calculate yearly average citations
+yearly_citations <- df_mergedx %>%
+  group_by(year) %>%
+  summarise(
+    total_citations = sum(cite_count, na.rm = TRUE),
+    avg_citations = mean(cite_count, na.rm = TRUE),
+    count = n()
+  ) %>%
+  arrange(year)
+
+# Plot yearly average citations
+ggplot(yearly_citations, aes(x = year)) +
+  geom_bar(aes(y = total_citations), stat = "identity", fill = "skyblue", alpha = 0.7) +
+  geom_line(aes(y = avg_citations * max(total_citations)/max(avg_citations)), 
+            color = "red", linewidth = 1) +
+  geom_point(aes(y = avg_citations * max(total_citations)/max(avg_citations)), 
+             color = "red", size = 3) +
+  scale_y_continuous(
+    name = "Total Citations",
+    sec.axis = sec_axis(~. * max(yearly_citations$avg_citations)/max(yearly_citations$total_citations), 
+                        name = "Average Citations per Paper")
+  ) +
+  theme_minimal() +
+  labs(title = "Yearly Citation Patterns",
+       x = "Year") +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        axis.title.y.left = element_text(color = "skyblue4"),
+        axis.title.y.right = element_text(color = "red"))
+```
+
+```{r}
+# 2. Citation and Impact Analysis
+# Identify top-cited papers
+top_papers <- df_mergedx %>%
+  arrange(desc(cite_count)) %>%
+  select(title, first_author, journal, year, cite_count) %>%
+  head(10)
+
+# Display top-cited papers
+print(top_papers)
+
+# Identify high-impact journals
+journal_impact <- df_mergedx %>%
+  group_by(journal) %>%
+  summarise(
+    papers = n(),
+    total_citations = sum(cite_count, na.rm = TRUE),
+    avg_citations = mean(cite_count, na.rm = TRUE)
+  ) %>%
+  filter(papers >= 3) %>%  # Only include journals with at least 3 papers
+  arrange(desc(total_citations))
+
+# Display top journals by total citations
+print(head(journal_impact, 10))
+```
+
+```{r}
+
+# Load world map data
+#world_map <- map_data("world")
+
+# # World map to show the distribution of publications by country
+# df_merged %>%
+#   count(country) %>%
+#   ggplot(aes(fill = n, map_id = country)) +
+#   geom_map(map = world_map, aes(map_id = countries), color = "white", data = world_map) +
+#   expand_limits(x = world_map$long, y = world_map$lat) +  # Ensure the map fits within the plot limits
+#   scale_fill_viridis_c() +
+#   labs(title = "Distribution of Publications by Country",
+#        fill = "Number of Publications") +
+#   theme_void()
+```
+
+*##Next Steps*
+
+#Continue bilbiometric analysis
+
+#Create more visualizations to represent the data
+
+-   Identify key authors and institutions
+
+-   Conduct a keyword co-occurrence analysis
+
+-   Conduct a network analysis to identify collaboration patterns
+
+-   Conduct a topic modeling on key themes or main research focus of the studies
+
+------------------------------------------------------------------------
+
+```         
+         **Week 12: Progress Updates 5**04/07/2025
+```
+
+I filtered the data to exclude papers published in 2025 because these papers have no citations. The include criteria states papers should have at least one citation. I also filtered out papers with low confidence. The data was further cleaned to remove papers with no citation counts.
+
+```{r}
+# #filter papers no citation count
+# df_mergedx <- df_merged %>%
+#   filter(cite_count > 0)
+
+#check the number of rows after removing irrelevant data
+nrow(df_mergedx)
+
+#check the first few rows of the data
+head(df_mergedx)
+
+#filter papers with low confidence
+df_mergedx <- df_mergedx %>%
+  filter(!str_detect(confidence, "Low"))
+
+#save new df_mergedx
+write_csv(df_mergedx, "df_mergedx.csv")
+
+```
+
+```{r}
+# Load necessary libraries
+#library(dplyr)
+#library(ggplot2)
+#library(stringr)
+#library(tidyr)
+
+###Topic Authors and Affiliations
+
+
+# Get the top authors
+top_authors <- df_mergedx %>%
+  count(first_author) %>%
+  filter(!is.na(first_author) & first_author != "") %>%
+  arrange(desc(n)) %>%
+  head(10)
+
+print(top_authors)
+```
+
+```{r}
+# Process affiliations: Some rows have multiple institutions separated by semicolons or commas.
+# I first try to split by semicolon.
+
+aff_df <- df_mergedx %>% 
+  filter(!is.na(affiliation) & affiliation != "") %>% 
+  mutate(affiliation = as.character(affiliation)) %>%  # To ensure affiliation is character
+  mutate(affiliation_list = strsplit(affiliation, ";")) %>% 
+  unnest(affiliation_list) %>% 
+  mutate(affiliation_clean = trimws(affiliation_list))
+
+# Count frequency of each affiliation
+top_affiliations <- aff_df %>%
+  count(affiliation_clean, sort = TRUE) %>%
+  head(10)
+
+print(top_affiliations)
+
+# Plot the top affiliations with ggplot2 with a clear white background
+plot_affiliations <- ggplot(top_affiliations, aes(x = reorder(affiliation_clean, n), y = n)) +
+  geom_bar(stat = 'identity', fill = 'steelblue') +
+  coord_flip() +
+  labs(title = 'Top Affiliations', x = 'Affiliation', y = 'Count') +
+  theme_minimal(base_size = 12) +
+  theme(panel.background = element_rect(fill = 'white'))
+
+print(plot_affiliations)
+
+# Additionally, visualize top authors (already computed before) similarly
+plot_authors <- ggplot(top_authors, aes(x = reorder(first_author, n), y = n)) +
+  geom_bar(stat = 'identity', fill = 'tomato') +
+  coord_flip() +
+  labs(title = 'Top Authors', x = 'Author', y = 'Count') +
+  theme_minimal(base_size = 12) +
+  theme(panel.background = element_rect(fill = 'white'))
+
+print(plot_authors)
+```
+
+**Mapping publication count by Country**
+
+```{r}
+#library(dplyr)
+#library(ggplot2)
+#library(maps)
+
+# Count the number of publications per country
+country_counts <- df_mergedx %>% 
+  filter(!is.na(country) & country != "") %>% 
+  count(country, sort = TRUE)
+
+# Prepare world map data
+world_map <- map_data("world")
+
+# Harmonize country names if necessary (not shown here)
+
+# Join the counts with the world map data
+country_counts <- country_counts %>% rename(region = country)
+map_data_counts <- left_join(world_map, country_counts, by = "region")
+
+# Create the map plot
+map_plot <- ggplot(map_data_counts, aes(x = long, y = lat, group = group, fill = n)) +
+  geom_polygon(color = "gray90", size = 0.1) +
+  scale_fill_gradient(
+    name = "Publication Count",
+    low = "lightblue",
+    high = "darkblue",
+    na.value = "white"
+  ) +
+  theme_minimal() +
+  labs(title = "Geographical Distribution of Publications") +
+  theme(
+    panel.background = element_rect(fill = "white"),
+    axis.text = element_blank(),
+    axis.title = element_blank(),
+    axis.ticks = element_blank()
+  )
+
+print(map_plot)
+```
+
+```{r}
+
+# #library(viridis)
+# #library(rnaturalearth)
+# world <- ne_countries(scale = "medium", returnclass = "sf")
+# merged_data <- merge(world, df_mergedx, by.x = "iso_a3", by.y = "ISO Code")
+
+map_plot1 <- ggplot(map_data_counts, aes(x = long, y = lat, group = group, fill = n)) +
+  geom_polygon(color = "gray90", size = 0.1) +
+  scale_fill_viridis_c(
+    name = "Publication Count",
+    na.value = "white",
+    option = "D"
+  ) +
+  theme_minimal() +
+  labs(title = "Geographical Distribution of Publications") +
+  theme(panel.background = element_rect(fill = "white"))
+print (map_plot1)
+```
+
+```{r}
+library(sf)
+library(rnaturalearth)
+library(dplyr)
+
+# Your publication data
+pub_data <- data.frame(
+  country = c("United States", "United Kingdom", "Germany", "Australia", 
+              "Canada", "Italy", "Netherlands", "Spain", "Brazil", "Hong Kong"),
+  count = c(98, 31, 13, 12, 12, 12, 8, 8, 5, 5)
+)
+
+# Standardize country names
+pub_data <- pub_data %>%
+  mutate(country = case_when(
+    country == "United States" ~ "United States of America",
+    country == "Hong Kong" ~ "Hong Kong S.A.R.",
+    TRUE ~ country
+  ))
+
+# Load world map and merge
+world <- ne_countries(scale = "medium", returnclass = "sf")
+merged_data <- world %>% 
+  left_join(pub_data, by = c("name" = "country"))
+
+# Convert to 'sf' (redundant here since 'world' is already 'sf', but safe)
+merged_sf <- st_as_sf(merged_data)  # Now works!
+
+# Plot with ggplot2
+ggplot(merged_sf) +
+  geom_sf(aes(fill = count)) +
+  scale_fill_viridis_c(na.value = "grey90")
+```
+
+```{r}
+# library(sf)
+# library(rnaturalearth)
+# library(dplyr)
+# library(ggplot2)
+# library(viridis)
+
+# Your publication counts data
+pub_data <- data.frame(
+  country = c("United States", "United Kingdom", "Germany", "Australia", 
+              "Canada", "Italy", "Netherlands", "Spain", "Brazil", "Hong Kong",
+              "Indonesia", "Chile", "China", "Denmark", "Japan", "Malaysia", 
+              "South Africa", "Sweden", "France", "India", "Bangladesh", 
+              "Ireland", "New Zealand", "Norway", "Switzerland", "Taiwan", 
+              "Uruguay", "Belgium", "Burkina Faso", "Croatia", "Czech Republic",
+              "Ecuador", "Egypt", "Ethiopia", "Finland", "Kenya", "Lebanon", 
+              "Malawi", "Morocco", "Nigeria", "Poland", "Portugal", "Singapore",
+              "Slovenia", "South Korea", "Sri Lanka", "Uganda", "Viet Nam"),
+  count = c(98, 31, 13, 12, 12, 12, 8, 8, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 3, 3,
+            2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1)
+)
+
+# Standardize country names to match 'rnaturalearth'
+pub_data <- pub_data %>%
+  mutate(country = case_when(
+    country == "United States" ~ "United States of America",
+    country == "Hong Kong" ~ "Hong Kong S.A.R.",
+    country == "Czech Republic" ~ "Czechia",
+    country == "South Korea" ~ "Republic of Korea",
+    country == "Viet Nam" ~ "Vietnam",
+    country == "Taiwan" ~ "Taiwan Province of China",  # Note: Map may not display due to geopolitical constraints
+    TRUE ~ country
+  ))
+
+# Load world map (medium resolution) and merge
+world <- ne_countries(scale = "medium", returnclass = "sf") %>%
+  select(name, iso_a3, geometry)
+
+merged_data <- world %>%
+  left_join(pub_data, by = c("name" = "country"))
+
+# Plot
+pubmap <- ggplot(merged_data) +
+  geom_sf(aes(fill = count), color = "white", size = 0.2) +
+  scale_fill_viridis(
+    name = "Publications",
+    option = "plasma",
+    na.value = "grey90",
+    limits = c(0, 100),
+    breaks = c(0, 10, 30, 50, 75, 100)
+  ) +
+  labs(
+    title = "Academic Publications by Country",
+    caption = paste("Highest count: USA (98) |", 
+                    "Total countries:", nrow(pub_data))
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "bottom"
+  )
+
+print (pubmap)
+# Save the plot (optional)
+ggsave("pub_map.jpg", width = 10, height = 6, dpi = 300)
+```
+
+```{r}
+# library(leaflet)
+# library(leaflet.extras)
+
+merged_sf <- st_as_sf(merged_data)
+
+leaflet(merged_sf) %>%
+  addPolygons(
+    fillColor = ~colorBin("YlOrRd", count)(count),
+    fillOpacity = 0.7,
+    color = "white",
+    weight = 1,
+    label = ~paste(name, ": ", count, " publications")
+  ) %>%
+  addLegend(
+    pal = colorBin("YlOrRd", merged_sf$count, bins = 5),
+    values = ~count,
+    title = "Publications"
+  )
+```
+
+```{r}
+library(htmlwidgets)  # For saving as HTML
+
+# Load world map and merge
+world <- ne_countries(scale = "medium", returnclass = "sf")
+merged_data <- world %>% 
+  left_join(pub_data, by = c("name" = "country"))
+
+# Create interactive map
+map <- leaflet(merged_data) %>%
+  addPolygons(
+    fillColor = ~colorBin("YlOrRd", count, bins = 5)(count),
+    fillOpacity = 0.7,
+    color = "white",
+    weight = 1,
+    label = ~paste(name, ":", count, "publications"),
+    highlightOptions = highlightOptions(
+      weight = 2,
+      color = "#666",
+      fillOpacity = 0.9,
+      bringToFront = TRUE
+    )
+  ) %>%
+  addLegend(
+    pal = colorBin("YlOrRd", merged_data$count, bins = 5),
+    values = ~count,
+    title = "Publications",
+    position = "bottomright"
+  ) %>%
+  addProviderTiles(providers$CartoDB.Positron)  # Clean base map
+
+# Save as HTML
+saveWidget(map, file = "publications_map.html", selfcontained = TRUE)
+```
+
+**Keyword Co-occurrence Analysis**
+
+```{r}
+# keyword analysis using base igraph for visualization library(dplyr)
+library(stringr)
+library(igraph)
+
+# I am working with the author_keywords column
+
+# Filter rows with non-empty keywords
+keywords_df <- df_mergedx %>% filter(!is.na(author_keywords) & author_keywords != "") %>%
+  select(id, author_keywords)
+
+# Tokenize and clean keywords: They are separated by semicolons
+# I'll first replace semicolons with commas then split by comma.
+keywords_df <- keywords_df %>%
+  mutate(author_keywords = str_replace_all(author_keywords, ";", ",")) %>%
+  mutate(keyword_list = strsplit(author_keywords, ","))
+
+# Unnest the keyword_list
+tokenized_keywords <- keywords_df %>%
+  unnest(keyword_list) %>%
+  mutate(keyword = tolower(trimws(keyword_list))) %>%
+  filter(keyword != "")
+
+# Count keyword frequencies
+keyword_counts <- tokenized_keywords %>%
+  count(keyword, sort = TRUE) %>%
+  filter(n >= 3)  # Filter for keywords that appear at least 3 times
+
+print(head(keyword_counts, 10))
+```
+
+```{r}
+# To compute co-occurrence counts using tokenized keywords
+# First, to get unique keywords for each record so that repeated keywords in one record don't result double counting
+unique_keywords <- tokenized_keywords %>% group_by(id) %>% summarise(keywords = list(unique(keyword)))
+
+# Function to generate all pairs of unique keywords for a record (if count>1)
+cooccur_pairs <- lapply(unique_keywords$keywords, function(x) {
+  if(length(x) > 1) {
+    pairs <- t(combn(sort(x), 2))
+    as.data.frame(pairs, stringsAsFactors = FALSE)
+  } else {
+    NULL
+  }
+})
+
+# Bind all pairs
+cooccurrence_df <- do.call(rbind, cooccur_pairs)
+if(!is.null(cooccurrence_df) && nrow(cooccurrence_df) > 0) {
+  names(cooccurrence_df) <- c('keyword1', 'keyword2')
+  # Count the frequency of each co-occurring pair
+  cooccurrence_counts <- cooccurrence_df %>% 
+    group_by(keyword1, keyword2) %>% 
+    summarise(n = n(), .groups = 'drop') %>% 
+    arrange(desc(n))
+} else {
+  cooccurrence_counts <- data.frame(keyword1=character(), keyword2=character(), n=integer())
+}
+
+print(head(cooccurrence_counts, 10))
+
+# Build an igraph network with a filter: only include co-occurrence pairs that occur at least 2 times
+min_occurrence <- 2
+edge_list <- cooccurrence_counts %>% filter(n >= min_occurrence)
+
+if(nrow(edge_list) > 0) {
+  g <- graph_from_data_frame(edge_list, directed = FALSE)
+  
+  # Basic plot using igraph's plot function
+  set.seed(42)
+  plot(g, edge.width = E(g)$n, vertex.label.cex = 0.8, main = 'Keyword Co-occurrence Network')
+} else {
+  print('Not enough co-occurrence data to build network.')
+}
+```
+
+**Network Analysis of collaborations**
+
+```{r}
+# Check head of the 'first_author' and 'co_authors' columns
+#head(df[, c('first_author', 'co_authors')])
+
+# Filter out rows with non-empty co_authors column
+collab_df <- df_mergedx %>% filter(!is.na(co_authors) & co_authors != "") %>%
+  select(first_author, co_authors)
+
+# Tokenize the co_authors into individual authors; assuming they are separated by commas or semicolons.
+collab_df <- collab_df %>%
+  mutate(co_authors = str_replace_all(co_authors, ";", ",")) %>%
+  mutate(co_author_list = strsplit(co_authors, ","))
+
+# Clean co_author names: trim and lowercase maybe
+collab_df <- collab_df %>%
+  rowwise() %>%
+  mutate(co_author_list = list(trimws(co_author_list))) %>%
+  ungroup()
+
+# Build the edge list: each edge from first_author to each co-author
+edge_list <- collab_df %>%
+  select(first_author, co_author_list) %>%
+  tidyr::unnest(co_author_list) %>%
+  filter(co_author_list != "") %>%
+  rename(co_author = co_author_list)
+
+# Remove any self-loops if first_author equals co_author
+edge_list <- edge_list %>% filter(first_author != co_author)
+
+# Create a graph using igraph (undirected)
+g <- graph_from_data_frame(edge_list, directed = FALSE)
+
+# Compute network metrics: degree centrality, closeness, betweenness
+deg <- degree(g, mode = 'all')
+clos <- closeness(g, mode = 'all')
+between <- betweenness(g, directed = FALSE)
+
+# Add the metrics as vertex attributes
+V(g)$degree <- deg
+V(g)$closeness <- clos
+V(g)$betweenness <- between
+
+# Print summary of metrics for top 10 vertices by degree
+top_deg <- sort(deg, decreasing = TRUE)[1:10]
+print(top_deg)
+
+# Visualize the network graph; adjust vertex size proportional to degree
+set.seed(123)
+plot(g, vertex.size = 5 + 2*deg, vertex.label.cex = 0.7, edge.arrow.size = 0.5,
+     main = 'Collaboration Network (Authors)', vertex.label = V(g)$name)
+#I am not impressed with the plot above. I will try and clean the data and plot again
+```
+
+```{r}
+# Try installing the stm package if not available
+#install.packages('stm', repos='https://cran.rstudio.com/', dependencies=TRUE)
+
+# The code snippet demonstrates the installation of the stm package, processing of text documents, and estimation of topic prevalence over publication years using Structural Topic Modeling.
+
+library(stm)
+library(ggplot2)
+
+# Extract summary_findings documents
+docs <- df_mergedx$abstract
+# Remove empty or NA docs
+docs <- docs[!is.na(docs) & docs != ""]
+
+# Create metadata: select publication years corresponding to docs
+meta <- data.frame(year = df_mergedx$year[!is.na(df_mergedx$abstract) & df_mergedx$abstract != ""], stringsAsFactors = FALSE)
+
+# Process the documents: tokenization, cleaning, etc.
+processed <- textProcessor(documents = docs, metadata = meta)
+
+# Prepare documents for stm
+out <- prepDocuments(processed$documents, processed$vocab, processed$meta, lower.thresh = 5)
+
+# Let's assume 5 topics
+K <- 5
+set.seed(123)
+stm_model <- stm(documents = out$documents, vocab = out$vocab, K = K, prevalence = ~year, data = out$meta, max.em.its = 75, init.type = "Spectral")
+
+# Display top words for each topic
+labelTopics(stm_model, n = 10)
+
+# Plot topic prevalence
+plot(stm_model, type = "summary", main = "Topic Prevalence")
+
+```
+
+```{r}
+# Estimate effect of publication year on topics
+prep <- estimateEffect(1:K ~ year, stm_model, meta = out$meta, uncertainty = "Global")
+
+# For each topic, plot the effect of year
+plot(prep, covariate = "year", topics = 1:5, model = stm_model, method = "continuous", xlab = "Year", main = "Effect of Year on Topics")
+```
+
+```{r}
+# Create a country collaboration network
+library(dplyr)
+library(bibliometrix)
+
+# Convert affiliation column to character and split entries
+df_processed <- df_mergedx %>%
+  mutate(
+    affiliation = as.character(affiliation),
+    affiliation = gsub("\\s{2,}", " ", affiliation)  # Remove extra spaces
+  )
+
+df_processed <- df_processed %>%
+  filter(!is.na(affiliation) & affiliation != "")
+
+# If your data is from a bibliographic export (e.g., Web of Science, Scopus)
+# df_processed <- convert2df("yourfile.bib", dbsource = "scopus", format = "bibtex")
+# # Then run metaTagExtraction
+# df_meta <- metaTagExtraction(df_processed, Field = "AU_CO", sep = ";")
+
+
+```
+
+```{r}
+library(stringr)
+library(countrycode)
+library(purrr)
+
+# Extract country names using regex
+df_countries <- df_processed %>%
+  mutate(
+    countries = str_extract_all(
+      affiliation,
+      "\\b(?:Germany|United Kingdom|Netherlands|Austria|Norway|Switzerland|United States|Canada|Czech Republic|China|sweden|Spain|Brazil|Hong Kong|Belgium|Chile|Taiwan|Italy|Malawi|Australia|Ecuado|Japan|Ethiopia|Norway|Malayia|Indonesia|South Africa|India|South Korea|France|Morocco|Finlan|Slovenia|Ireland|Kenya|Vietnam|Bangladesh|Nigeria|Demark|Singapore|Uganda|Qatar|Philipines|Pakistan|Burkina Faso|Egypt|Switzerland|Norway|Tanzania)\\b"  # Add all target countries
+    )
+  ) %>%
+  unnest(countries) %>%
+  mutate(
+    country_code = countrycode(countries, "country.name", "iso3c")  # Standardize names
+  )
+
+#####################Creating country pairs for the network analysis################
+
+country_pairs <- df_countries %>%
+  group_by(id) %>%  
+  summarise(countries = list(unique(country_code))) %>%
+  rowwise() %>%  # Process each group individually
+  mutate(
+    pairs = if (length(countries) > 1) {
+      list(combn(countries, 2, simplify = FALSE))  # Generate pairs per group
+    } else {
+      list(NULL)  # Handle groups with only 1 country
+    }
+  ) %>%
+  unnest(pairs) %>%
+  mutate(
+    country1 = map_chr(pairs, 1),  # Extract first country in pair
+    country2 = map_chr(pairs, 2),   # Extract second country
+  ) %>%
+  count(country1, country2)  # Count collaborations
+
+
+# Convert to igraph object
+#library(igraph)
+g <- graph_from_data_frame(country_pairs, directed = FALSE)
+plot(g, layout = layout_with_fr, vertex.label.cex = 0.8)
+#add a title: Country Collaboration Network
+title("Country Collaboration Network")
+# Save the plot
+# Save the plot to a file
+#ggsave("country_collaboration_network.png", width = 10, height = 8, dpi = 300)
+
+
+#save plot to directory
+
+```
+
+```{r}
+
+
+# Degree Centrality
+V(g)$degree <- degree(g)
+
+# Betweenness Centrality
+V(g)$betweenness <- betweenness(g)
+
+# Closeness Centrality
+V(g)$closeness <- closeness(g)
+
+# Community Detection (Louvain)
+communities <- cluster_louvain(g)
+V(g)$community <- as.factor(membership(communities))
+
+# Edge Density
+edge_density(g)
+
+# Diameter
+diameter(g)
+
+```
+
+```{r}
+library(ggraph)
+# Plot degree distribution
+ggplot(data.frame(degree = degree(g)), aes(x = degree)) +
+  geom_histogram(binwidth = 1, fill = "steelblue") +
+  labs(title = "Degree Distribution", x = "Degree", y = "Count")
+# Save the plot
+#ggsave("degree_distrib.jpg", width = 10, height = 8, dpi = 300)
+
+# Community visualization
+ggraph(g, layout = "fr") +
+  geom_edge_link(alpha = 0.2) +
+  geom_node_point(aes(color = community, size = degree)) +
+  theme_void()+
+  scale_color_manual(values = rainbow(length(unique(V(g)$community)))) +
+  labs(title="Community Visualization", color = "Community", size = "Degree") +
+  theme(legend.position = "bottom")
+
+# Save the plot
+#ggsave("community_visualization.jpg", width = 10, height = 8, dpi = 300)
+```
+
+#Centrality measures for the top five countries
+
+```{r}
+
+# Compute centrality measures
+centrality_tbl <- tibble(
+  country = V(g)$name,
+  degree = degree(g),
+  betweenness = betweenness(g),
+  closeness = closeness(g)
+)
+
+top_countries <- centrality_tbl %>%
+  arrange(desc(degree)) %>%
+  slice_head(n = 5)
+
+library(knitr)
+kable(top_countries, digits = 3, caption = "Top 5 Countries by Degree Centrality")
+```
+
+\#*#Next Steps* - Identify the most common visualization types - Identify the most common visualization tools - Identify the key audience or stakeholders for the visualizations - Identify the most common evaluation methods - Prepare a draft report summarizing the findings
+
+```{r}
+# Loading the dataset
+ data <- read.csv('paper_intext_dta.csv', stringsAsFactors = FALSE)
+
+# For participant types
+participant_df <- data %>% 
+  filter(!is.na(targets.or.participants)) %>% 
+  mutate(participant = strsplit(as.character(targets.or.participants), ",\\s*")) %>% 
+  unnest(participant)
+
+participant_counts <- participant_df %>% 
+  group_by(participant) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count))
+
+print(participant_counts)
+
+# Plot with counts on bars 
+p6 <- ggplot(participant_counts, aes(x = reorder(participant, count), y = count)) +
+  geom_bar(stat = 'identity', fill = 'darkred', width = 0.7) +  # Adjust bar width
+  geom_text(aes(label = count), hjust = -0.2, size = 3.5, color = 'black') +  # Add counts
+  coord_flip() +  # Horizontal bars
+  labs(title = 'Participant Types Counts', x = 'Participant Type', y = 'Count') +
+  theme_minimal() +  # Clean background
+  theme(
+    panel.grid.major.y = element_blank(),  # Remove horizontal grid lines
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_line(color = "grey90"),  # Light vertical grid
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Centered title
+    axis.text = element_text(color = "black"),  # Black axis text
+    axis.title = element_text(face = "bold")  # Bold axis titles
+  ) +
+  expand_limits(y = max(participant_counts$count) * 1.1)  # Add space for labels
+
+print(p6)
+```
+
+```{r}
+# 1. Types of Data Visualizations
+viz_df <- data %>% 
+  filter(!is.na(data.visualization.types)) %>% 
+  mutate(viz = strsplit(as.character(data.visualization.types), ",\\s*")) %>% 
+  unnest(viz)
+
+viz_counts <- viz_df %>% 
+  group_by(viz) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count))
+
+p1 <- ggplot(viz_counts, aes(x = reorder(viz, count), y = count)) +
+  geom_bar(stat = 'identity', fill = 'steelblue') +
+  coord_flip() +
+  labs(title = 'Types of Data Visualizations Used', 
+       x = 'Visualization Type', 
+       y = 'Count') +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+print(p1)
+
+# 2. Tools used for Visualization
+tool_df <- data %>% 
+  filter(!is.na(data.visualization.tools)) %>% 
+  mutate(tool = strsplit(as.character(data.visualization.tools), ",\\s*")) %>% 
+  unnest(tool)
+
+tool_counts <- tool_df %>% 
+  group_by(tool) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count))
+
+p2 <- ggplot(tool_counts, aes(x = reorder(tool, count), y = count)) +
+  geom_bar(stat = 'identity', fill = 'darkgreen') +
+  coord_flip() +
+  labs(title = 'Tools Used for Data Visualization', 
+       x = 'Tool', 
+       y = 'Count') +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+print(p2)
+
+# 3. Evaluation Methods
+eval_df <- data %>% 
+  filter(!is.na(type.of.evaluation)) %>% 
+  mutate(eval = strsplit(as.character(type.of.evaluation), ",\\s*")) %>% 
+  unnest(eval)
+
+eval_counts <- eval_df %>% 
+  group_by(eval) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count))
+
+p3 <- ggplot(eval_counts, aes(x = reorder(eval, count), y = count)) +
+  geom_bar(stat = 'identity', fill = 'purple') +
+  coord_flip() +
+  labs(title = 'Evaluation Methods Used', 
+       x = 'Evaluation Method', 
+       y = 'Count') +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+print(p3)
+
+# 4. Research Domains
+domain_counts <- data %>% 
+  filter(!is.na(domain)) %>% 
+  group_by(domain) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count))
+
+p4 <- ggplot(domain_counts, aes(x = reorder(domain, count), y = count)) +
+  geom_bar(stat = 'identity', fill = 'orange') +
+  coord_flip() +
+  labs(title = 'Research Domains', 
+       x = 'Domain', 
+       y = 'Count') +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+print(p4)
+
+# 5. Study Designs
+design_df <- data %>% 
+  filter(!is.na(study_design)) %>% 
+  mutate(design_split = strsplit(as.character(study_design), ",\\s*")) %>% 
+  unnest(design_split)
+
+design_counts <- design_df %>% 
+  group_by(design_split) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count))
+
+p5 <- ggplot(design_counts, aes(x = reorder(design_split, count), y = count)) +
+  geom_bar(stat = 'identity', fill = 'brown') +
+  coord_flip() +
+  labs(title = 'Study Designs Used', 
+       x = 'Study Design', 
+       y = 'Count') +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+
+print(p5)
+```
+
+```{r}
+# Assuming 'df' is your dataframe with a 'domain' column
+# Step 1: Extract and clean domains
+domain_counts <- data %>%
+  # Drop NA values and convert to character
+  drop_na(domain) %>%
+  mutate(domain = as.character(domain)) %>%
+  # Split comma/separated domains into individual rows
+  mutate(domain = strsplit(domain, ",\\s*|;\\s*")) %>%
+  unnest(domain) %>%
+  # Clean whitespace and convert to lowercase
+  mutate(domain = str_trim(tolower(domain))) %>%
+  # Filter out empty strings
+  filter(domain != "") %>%
+  # Count domain frequencies
+  count(domain, name = "frequency") %>%
+  arrange(desc(frequency))
+
+# Print the most frequent domain
+most_freq_domain <- domain_counts$domain[1]
+print(paste("Most frequent domain:", most_freq_domain))
+
+# Step 2: Plot (using ggplot2)
+ggplot(domain_counts, aes(x = frequency, y = reorder(domain, frequency))) +
+  geom_col(fill = "darkmagenta") +  # Bar plot
+  geom_text(aes(label = frequency), hjust = -0.2, size = 3.5) +  # Add counts
+  labs(
+    title = "Frequency of Domains",
+    x = "Frequency",
+    y = "Domain"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    panel.grid.major.y = element_blank()  # Remove horizontal grid lines
+  ) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.1)))  # Space for labels
+```
+
+```{r}
+library(stringr)
+
+# Assume your data frame is called df and the column is study_design
+# Remove NA and convert to character
+study_series <- data %>%
+  filter(!is.na(study_design)) %>%
+  mutate(study_design = as.character(study_design))
+
+# Split by comma or semicolon, trim whitespace, and unnest
+study_designs_long <- study_series %>%
+  mutate(design = str_split(tolower(study_design), "[,;]")) %>%
+  unnest(design) %>%
+  mutate(design = str_trim(design)) %>%
+  filter(design != "")
+
+# Count frequency
+design_counts <- study_designs_long %>%
+  count(design, sort = TRUE)
+
+# Barplot
+ggplot(design_counts, aes(x = n, y = reorder(design, n))) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  labs(title = "Frequency of Study Designs", x = "Frequency", y = "Study Design") +
+  theme_minimal()
+
+# Most common study design
+most_common_design <- design_counts$design[1]
+cat("Most common study design:", most_common_design, "\n")
+
+```
+
+```{r}
+library(reshape2)
+
+# Get unique designs
+unique_designs <- unique(design_counts$design)
+
+# Create a list of designs per study (row)
+design_lists <- study_series %>%
+  mutate(design = str_split(tolower(study_design), "[,;]")) %>%
+  mutate(design = lapply(design, str_trim)) %>%
+  mutate(design = lapply(design, function(x) x[x != ""]))
+
+# Initialize co-occurrence matrix
+co_mat <- matrix(0, nrow = length(unique_designs), ncol = length(unique_designs),
+                 dimnames = list(unique_designs, unique_designs))
+
+# Fill co-occurrence matrix
+for (row in design_lists$design) {
+  if (length(row) > 1) {
+    combos <- combn(row, 2)
+    for (i in 1:ncol(combos)) {
+      a <- combos[1, i]
+      b <- combos[2, i]
+      co_mat[a, b] <- co_mat[a, b] + 1
+      co_mat[b, a] <- co_mat[b, a] + 1
+    }
+  }
+}
+
+# Convert to data frame for plotting
+co_df <- melt(co_mat)
+colnames(co_df) <- c("Design1", "Design2", "Count")
+
+# filter out zero-count cells for cleaner labels
+co_df_nonzero <- co_df %>% filter(Count > 0)
+
+# Plot heatmap with count labels
+ggplot(co_df, aes(x = Design1, y = Design2, fill = Count)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "white", high = "orangered") +
+  geom_text(data = co_df_nonzero, aes(label = Count), color = "black", size = 3) +
+  labs(title = "Study Design Co-occurrence Matrix", x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+```
+
+```{r}
+cat("Most common study design:", most_common_design, "\n")
+
+```
+
+```{r}
+# column is 'type of evaluation'
+eval_series <- data %>%
+  filter(!is.na(type.of.evaluation)) %>%
+  mutate(evaluation_type = as.character(type.of.evaluation))
+
+# Split by comma or semicolon, trim whitespace, and unnest
+evals_long <- eval_series %>%
+  mutate(eval = str_split(tolower(type.of.evaluation), "[,;]")) %>%
+  unnest(eval) %>%
+  mutate(eval = str_trim(eval)) %>%
+  filter(eval != "")
+
+# Count frequency
+eval_counts <- evals_long %>%
+  count(eval, sort = TRUE)
+
+# Barplot
+ggplot(eval_counts, aes(x = n, y = reorder(eval, n))) +
+  geom_bar(stat = "identity", fill = "darkolivegreen3") +
+  labs(title = "Frequency of Evaluation Types", x = "Frequency", y = "Evaluation Type") +
+  theme_minimal()
+
+```
+
+```{r}
+# Get unique evaluation types
+unique_evals <- unique(eval_counts$eval)
+
+# Create a list of evals per study (row)
+eval_lists <- eval_series %>%
+  mutate(eval = str_split(tolower(evaluation_type), "[,;]")) %>%
+  mutate(eval = lapply(eval, str_trim)) %>%
+  mutate(eval = lapply(eval, function(x) x[x != ""]))
+
+# Initialize co-occurrence matrix
+co_mat_eval <- matrix(0, nrow = length(unique_evals), ncol = length(unique_evals),
+                      dimnames = list(unique_evals, unique_evals))
+
+# Fill co-occurrence matrix
+for (row in eval_lists$eval) {
+  if (length(row) > 1) {
+    combos <- combn(row, 2)
+    for (i in 1:ncol(combos)) {
+      a <- combos[1, i]
+      b <- combos[2, i]
+      co_mat_eval[a, b] <- co_mat_eval[a, b] + 1
+      co_mat_eval[b, a] <- co_mat_eval[b, a] + 1
+    }
+  }
+}
+
+# Convert to data frame for plotting
+co_df_eval <- melt(co_mat_eval)
+colnames(co_df_eval) <- c("Eval1", "Eval2", "Count")
+co_df_eval_nonzero <- co_df_eval %>% filter(Count > 0)
+
+# Plot heatmap with count labels
+ggplot(co_df_eval, aes(x = Eval1, y = Eval2, fill = Count)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "white", high = "darkolivegreen") +
+  geom_text(data = co_df_eval_nonzero, aes(label = Count), color = "black", size = 3) +
+  labs(title = "Evaluation Type Co-occurrence Matrix", x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
