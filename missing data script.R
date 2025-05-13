@@ -74,26 +74,5 @@ stripplot(imputed_data)
 
 
 
-install.packages("ellmer")
-library(ellmer)
-install.packages("pal")
-chat <- chat_openai()
-library(usethis)
-library(pal)
-install.packages("mall")
-
-#usethis::edit_r_environ()
-
-#{ellmer}----------------------------
-
-#chat <- chat_openai(
-  #system_prompt = ""
-   #)
-
-#chat$chat ("What is API?")
-
-
-
-
 
 
