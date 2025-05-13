@@ -1,12 +1,12 @@
 ---
-title: "Preliminary Report, -Richard"
+title: "Bibliometric Analysis-Eval Data Viz"
 format: html
 editor: visual
 data: 03-24-2025 
 footer: "Data Visualisation and Communication in Evaluation (Richard Amoako)"
 ---
 
-**Title: Data Visualization and Communication in Evaluation-A Bibliometric Analysis**
+**Title: Data Visualization and Communication in Evaluation
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
 #| echo: false
@@ -33,11 +33,6 @@ library(dplyr)
 
 ```
 
-**Introduction**
-
-In an era defined by unprecedented data volume, the ability to effectively visualize and communicate complex information has become critical across disciplines (Kirk, 2019). Within the field of evaluation, data visualization offers powerful tools for enhancing understanding, facilitating stakeholder engagement, and ultimately, informing better decisions (Few, 2012; Evergreen, 2017). As evaluation practice evolves to address increasingly complex social programs and policies, the strategic use of visual displays can transform raw data into actionable insights (Patton, 2018).
-
-Despite the growing recognition of data visualization's potential, the field lacks a comprehensive synthesis of its development, key contributors, and emerging trends. Traditional literature reviews often fall short of capturing the breadth and interdisciplinary nature of this topic. Bibliometric analysis, a quantitative approach to mapping the structure of scientific knowledge, offers a rigorous and systematic alternative (Aria & Cuccurullo, 2017; van Eck & Waltman, 2014). By analyzing publication patterns, citation networks, and keyword co-occurrences, bibliometrics can reveal the intellectual landscape of data visualization in evaluation.
 
 This study employs bibliometric methods using the PRISMA framework to address critical questions about data visualization evolution, key influences, thematic foci, and global distribution of research on data visualization within the evaluation field. Through a comprehensive analysis of scholarly publications, this research aims to provide a valuable resource for researchers, practitioners, and policymakers seeking to understand and leverage the power of data visualization to improve evaluation practice.
 
@@ -45,99 +40,19 @@ This study employs bibliometric methods using the PRISMA framework to address cr
 
 RQ1- How has data visualization in evaluation evolved over time?
 
-RQ3- What are the most influential publications, authors, and institutions?
 
-RQ2- What types of visualizations and visualization tools are commonly used?
 
-RQ4- What thematic trends and emerging keywords shape this field?
-
-RQ5- How do different countries or disciplines contribute to this research?
-
-*Significance*
-
-This bibliometric study offers significant contributions to both evaluation theory and data visualization practice. First, it identifies critical gaps in the current literature. For instance, the under-representation of accessibility considerations in visualization design highlights a need for future research to focus on inclusive practices that ensure evaluation findings are accessible to diverse audiences. Similarly, the limited number of studies addressing the integration of emerging technologies like AI-driven visualization suggests an area ripe for exploration and innovation.
-
-Second, the analysis identifies best practices in the field. The prominence of stakeholder engagement as a central theme underscores the importance of interactive and participatory visualization approaches. The identification of key journals and influential authors provides a valuable guide for researchers and practitioners seeking to stay abreast of key developments. Furthermore, the study reveals effective collaboration networks, offering potential models for fostering interdisciplinary research and knowledge sharing.
-
-Finally, this study charts future directions for evaluators and data scientists. The increasing emphasis on mixed methods and visual analytics points towards the need for methodological advancements that combine quantitative and qualitative data in meaningful ways. The rise of AI-driven visualization opens new avenues for automating data processing, generating insights, and creating personalized visual displays. By synthesizing these trends and gaps, this bibliometric analysis provides a roadmap for advancing the field of data visualization in evaluation and increasing its impact on policy and practice.
-
-**3. Methods**
 
 *Research Design*
 
 This study employs a bibliometric analysis approach to comprehensively map the intellectual landscape of data visualization in evaluation research. The methodology is complemented by a systematic review process, adhering to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, to ensure a structured, transparent, and replicable selection of relevant literature.
 
-*The research design involves several key stages:*
-
-*Data Collection:* A comprehensive search of the major academic databases (e.g., Scopus, Web of Science) was conducted using predefined search strings related to "data visualization," "evaluation," and related terms.
-
-*Data Screening and Selection:* The initial search results were screened based on predefined inclusion and exclusion criteria, following PRISMA guidelines. This involved assessing titles, abstracts, and full texts to ensure relevance to the study's focus. Data Extraction: Relevant metadata (e.g., authors, titles, abstracts, keywords, publication years, citations) were extracted from the selected publications and imported into a bibliometric database.
 
 *Bibliometric Analysis:* The study applies a range of bibliometric techniques, including: Co-citation analysis: to identify clusters of highly cited publications and reveal the intellectual foundations of the field. Keyword co-occurrence mapping: exploring thematic trends and emerging research areas by analyzing the relationships between keywords used in the literature. Collaboration network analysis: examines patterns of collaboration among authors, institutions, and countries, and identifies key actors and knowledge hubs.
 
-*Data Visualization:* The results of the bibliometric analyses are visualized using network graphs, citation maps, and other visual representations to facilitate the interpretation and communication of the findings.
 
-*Software:* R software was employed for data analysis and visualization. Key packages included 'bibliometrix' for bibliometric analysis, 'tidyverse' for data manipulation and visualization, 'janitor' for data cleaning, and 'psych' for descriptive statistics. By combining systematic review principles with advanced bibliometric techniques, this research design provides a robust and transparent approach to exploring the evolving landscape of data visualization in evaluation research.
 
-**Data Collection and Extraction**
 
--   **Databases:** **Web of Science and Scopus** were chosen for their large amount of data, broader scope, detailed meta data, and comprehensive subject coverage.
-
--   **Search Strategy:** Keywords and Boolean search strings:
-
-    -   *“data visualization” AND (evaluation OR program evaluation OR* "process evaluation"*)*
-
-    -   "data visualization" *AND* (evaluation research" OR "evaluation report" OR "impact evaluation")
-
-    -   "data visualization", AND ("evaluation communication" OR "formative evaluation" OR "outcome evaluation"
-
-    -   “communicating” AND “evaluation” AND “results”
-
--   **Inclusion and Exclusion Criteria:**
-
-    -   Time range: (2010–2025)
-
-    -   Document types: Articles, reviews, book chapters, conference papers
-
-    -   Languages: English
-
-    -   Fields: Social sciences, international development
-
--   Several methods were used to extract data from online databases, mainly Scopus and Web of Science. Some metadata [were]{.underline} downloaded from [the]{.underline} Scopus and WoS websites using search terms, and CSV files were downloaded. Others were accessed through PyPaperBot and API.
-
-**Results**
-
-***Key Finding***
-
-*Publication Trends*
-
-The bibliometric analysis reveals a steady increase in scholarly output related to data visualization in evaluation over recent years. The upward trajectory in publication counts suggests growing academic and practical interest in leveraging data visualization techniques to enhance evaluation processes. This trend aligns with the broader movement toward data-driven decision-making across disciplines.
-
-*Influential Journals and Sources*
-
-The study identified several journals as leading publication venues for research on data visualization in evaluation. These journals consistently publish high-impact articles, indicating their central role in shaping discourse and advancing methodological innovations in the field. The concentration of publications in a select group of journals highlights the presence of established scholarly communities focused on this intersection.
-
-*Key Authors and Collaboration*
-
-Networks Analysis of authorship patterns points to a core group of prolific researchers who have contributed substantially to literature. Co-authorship networks reveal both tightly knit collaborations and a degree of interdisciplinarity, with authors from diverse backgrounds engaging in joint research efforts. This collaborative landscape has likely facilitated the cross-pollination of ideas and the adoption of best practices in data visualization for evaluation.
-
-T*hematic Patterns and Research Focus*
-
-Thematic analysis of keywords and article abstracts uncovers several dominant research themes: • The integration of interactive and dynamic visualizations to support stakeholder engagement in evaluation. • Methodological advancements in visual analytics are tailored for program and policy evaluation. • The role of visualization in communicating complex findings to non-technical audiences. These themes indicate that the field is not only concerned with technical development but also with the practical utility and accessibility of data visualization in real-world evaluation contexts R was the most used software or application for data visualization and visualization types were generally charts, graphs and plots.
-
-Summary
-
--   There has been a marked increase in research output on data visualization in evaluation, reflecting its rising importance.
-
--   A handful of journals and authors exert significant influence, suggesting the emergence of specialized scholarly communities.
-
--   Collaboration networks are robust, with evidence of interdisciplinary partnerships.
-
--   Research themes emphasize both methodological innovation and practical application, with a strong focus on enhancing communication and stakeholder engagement through visualization.
-
-*Conclusion*
-
-The bibliometric analysis demonstrates that data visualization is an increasingly vital component of evaluation research. The field is characterized by dynamic growth, influential contributors, and a balance between technical advancement and practical application. These findings provide a foundation for future research and highlight the need for continued innovation and collaboration to further integrate visualization into evaluation practice.
 
 ###Below is analysis and output of the data extraction and analysis
 
@@ -232,14 +147,6 @@ missing_summary <- rnew_biblio %>%
 #save new biblio
 write_csv(rnew_biblio, "rnew_biblio.csv")
 ```
-
-**What I am working on next:**
-
--   Complete the data screening from AsReview Lab,
-
--   Extract additional information on data viz and data vis tools from the documents, and
-
--   Begin preliminary analysis and visualization.
 
 . . .
 
